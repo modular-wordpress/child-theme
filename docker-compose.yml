@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mysql:
+    image: 'mysql:8.0'
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+  pwp:
+    image: 'wordpress:latest'
+    environment:
+      WORDPRESS_DB_PASSWORD: 'root'
+    volumes:
+      - ./build/modular-wordpress-parent:/var/www/html/wp-content/themes/modular-wordpress-parent
+      - ./build/modular-wordpress-child:/var/www/html/wp-content/themes/modular-wordpress-child
+    ports:
+      - 8080:80

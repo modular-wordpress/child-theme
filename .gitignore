@@ -1,5 +1,7 @@
 build/
 mwpm-modules/
 parent/
+node_modules/
+docker/
 
 .DS_Store
