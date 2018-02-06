@@ -12,13 +12,15 @@ if(!function_exists("mwpm_register_module")) {
 }
 
 // Find all ACF files and load them
-$di = new RecursiveDirectoryIterator(__DIR__ . "/../content_modules");
+if(file_exists(__DIR__ . "/../content_modules")) {
+    $di = new RecursiveDirectoryIterator(__DIR__ . "/../content_modules");
 
-foreach(new RecursiveIteratorIterator($di) as $filename => $file) {
-    $basename = basename($filename);
+    foreach(new RecursiveIteratorIterator($di) as $filename => $file) {
+        $basename = basename($filename);
 
-    if($basename === "acf.php") {
-        include_once $filename;
+        if($basename === "acf.php") {
+            include_once $filename;
+        }
     }
 }
 
