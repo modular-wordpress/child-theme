@@ -13,5 +13,6 @@ services:
     volumes:
       - ./build/modular-wordpress-parent:/var/www/html/wp-content/themes/modular-wordpress-parent
       - ./build/modular-wordpress-child:/var/www/html/wp-content/themes/modular-wordpress-child
+      - ./docker/plugins:/var/www/html/wp-content/plugins/
     ports:
       - 8080:80
