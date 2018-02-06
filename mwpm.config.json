@@ -1,12 +1,4 @@
 {
     "parentLocation": "parent",
-    "modulesLocation": "mwpm_modules",
-    "modules": {
-        "example_module": {
-            "type": "module",
-            "source": "github",
-            "name": "example_module",
-            "url": "https://github.com/modular-wordpress/example-module.git"
-        }
-    }
+    "modulesLocation": "mwpm_modules"
 }
