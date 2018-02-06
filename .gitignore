@@ -1,5 +1,5 @@
 build/
-mwpm-modules/
+mwpm_modules/
 parent/
 node_modules/
 docker/
